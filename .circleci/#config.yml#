@@ -34,7 +34,7 @@ references:
   attach_firebase_workspace: &attach_firebase_workspace
     attach_workspace:
       at: *workspace
-  persist_firebase_workspace: &persisgeert_firebase_workspace
+  persist_firebase_workspace: &persist_firebase_workspace
     persist_to_workspace:
       root: *workspace
       paths:
@@ -50,14 +50,14 @@ references:
       TERM: dumb
       _JAVA_OPTIONS: "-Xmx2048m -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
       GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m"'
-      RUN: yes | sdkmana
+      RUN: yes | sdkmanager --licenses && sdkmanager --update
   gcloud_config: &gcloud_config
     working_directory: *workspace
     docker:
       - image: google/cloud-sdk:latest
     environment:
       TERM: dumb
-
+      
 
   ## Keys
 
@@ -106,6 +106,9 @@ jobs:
       - run:
           name: chmod permissions
           command: chmod +x ./gradlew
+      -run:
+	 name: Download sdkmanager
+	 command: 
       - run:
           name: Download dependencies
           command: ./gradlew androidDependencies
