@@ -55,7 +55,7 @@ references:
     docker:
       - image: google/cloud-sdk:latest
     environment:
-      TERM: dumb
+      TERM: SdkDocker
   
 
   ## Keys
