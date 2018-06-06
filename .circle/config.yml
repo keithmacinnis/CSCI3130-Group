@@ -57,7 +57,7 @@ references:
       - image: google/cloud-sdk:latest
     environment:
       TERM: dumb
-      RUN: yes | sdkmanager --licenses && sdkmanager --update
+      #RUN: yes | sdkmanager --licenses && sdkmanager --update
 
   ## Keys
 
