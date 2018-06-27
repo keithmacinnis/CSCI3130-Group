@@ -16,7 +16,9 @@
     <string name="confirmPassRegErr">Passwords do not match.</string>
     <string name="submitDefault">REGISTER</string>
     <string name="title_activity_credential">Sign in</string>
-    <!--*********End Register Strings ********-->
+    <!--*********End Register Strings ********
+    *******String trelated to MY Profile-->
+    <string name="updateProfile">Update Profile</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -39,7 +41,8 @@
     <string name="favorites">Favorites</string>
     <string name="schedule">My Schedule</string>
     <string name="services">Dal Services</string>
-
+    <string name="profile">My Profile</string>
+    <string name="placeholder_image" />
     <!--*********End navbar strings******-->
 
 </resources>

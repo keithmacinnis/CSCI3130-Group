@@ -51,6 +51,10 @@ public abstract class BaseActivity extends AppCompatActivity{
                         if(menuItem.getItemId() == R.id.nav_logout){
                             logout();
                         }
+                        if(menuItem.getItemId() == R.id.nav_profile) {
+                            Intent profileIntent = new Intent(BaseActivity.this, ProfileActivity.class);
+                            startActivity(profileIntent);
+                        }
                         return true;
                     }
                 });
